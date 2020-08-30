@@ -1,0 +1,2 @@
+# CoreDataRelationShip
+for practice purpose
