@@ -16,18 +16,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ek-bv-Iif">
-                                <rect key="frame" x="20" y="171" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Sxm-J5-hVB">
+                                <rect key="frame" x="20" y="303" width="374" height="290"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ek-bv-Iif">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jva-pT-bq7">
+                                        <rect key="frame" x="0.0" y="64" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="details" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qIe-K6-2ql">
+                                        <rect key="frame" x="0.0" y="128" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6I-5f-pqL">
+                                        <rect key="frame" x="0.0" y="192" width="374" height="34"/>
+                                        <color key="backgroundColor" red="1" green="0.90588235289999997" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="SAVE"/>
+                                        <connections>
+                                            <action selector="saveBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3cH-2V-RfL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR2-vX-stk">
+                                        <rect key="frame" x="0.0" y="256" width="374" height="34"/>
+                                        <color key="backgroundColor" red="1" green="0.90588235289999997" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Dispay"/>
+                                        <connections>
+                                            <action selector="getData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g0Y-Is-NWV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Sxm-J5-hVB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ATc-yR-Fys"/>
+                            <constraint firstItem="Sxm-J5-hVB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OIX-Xp-7BK"/>
+                            <constraint firstItem="Sxm-J5-hVB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cGb-9t-qdH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sxm-J5-hVB" secondAttribute="trailing" constant="20" id="kIT-zU-1O4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="txt1" destination="0ek-bv-Iif" id="PAt-e2-kvH"/>
+                        <outlet property="txt2" destination="jva-pT-bq7" id="YWY-eF-1rM"/>
+                        <outlet property="txt3" destination="qIe-K6-2ql" id="YJD-x6-NJA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
